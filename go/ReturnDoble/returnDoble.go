@@ -11,6 +11,6 @@ func calcy(x, y, z int ) (a, b int) {
 }
 
 
-func returnDoble(){
+func main(){
 	fmt.Println(calcy(1,2,3))
 }

@@ -11,7 +11,7 @@ func calcz(x, y, z int ) (a, b int) {
 }
 
 
-func flotante(){
+func main(){
 	x, y := calcz(1,2,3)
 	a, _ := calcz(1,2,3)
 	_ , c := calcz(1,2,3)

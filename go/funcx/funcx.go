@@ -9,6 +9,6 @@ func calcx(x, y, z int ) int {
 }
 
 
-func funcx(){
+func main(){
 	fmt.Println(calcx(1,2,3))
 }

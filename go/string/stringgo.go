@@ -10,7 +10,7 @@ func mystrx1(a int ) string {
 }
 
 
-func stringgo(){
+func main(){
 	s := "My value is " + mystrx1(45)
 	fmt.Printf("type %T, value %v\n", s, s)
 }

@@ -4,6 +4,6 @@ import (
 		"fmt"
 		"math"
 )
-func mainPi(){
+func main(){
 	fmt.Println(math.Pi)
 }

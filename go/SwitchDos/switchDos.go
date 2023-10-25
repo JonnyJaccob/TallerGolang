@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func swithdos(){
+func main(){
 	fmt.Println("When is Friday")
 	today := time.Now().Weekday()
 	//switch today.Friday{

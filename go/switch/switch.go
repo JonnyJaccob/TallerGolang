@@ -6,7 +6,7 @@ import (
 
 
 
-func caseswitch(){
+func main(){
 	str := "Hello World"
 	switch str{
 	case "Hello" + " World":

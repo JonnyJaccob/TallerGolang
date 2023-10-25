@@ -8,7 +8,8 @@ import (
 var c, python, java bool = true, false, true
 var cmas bool
 
-func vargo(){
+func main(){
+	fmt.Println(python)
 	python := true
 	i := 10
 	fmt.Println(i,c,java,python,cmas,math.Pi)

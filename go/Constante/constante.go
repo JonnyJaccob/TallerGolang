@@ -7,7 +7,7 @@ import (
 const PI = 3.14
 
 
-func constante(){
+func main(){
 	const World = "§"
 	fmt.Println("Hello", World)
 	fmt.Println("Happy",PI,"Day")
