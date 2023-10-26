@@ -1,4 +1,4 @@
-package main
+package MMNum
 
 import (
 	"fmt"
@@ -18,6 +18,32 @@ func EsLetraNumero(x byte) (string, int){
 	}
 		
 }
+func FcicloContador(letras []string) (min,may,num int, tmin,tmay,tnum string){
+	for _, str := range letras {
+		char := str[0]
+		_, val  := EsLetraNumero(char)
+		if val == 1 {
+			if min != 0 {  tmin += ", "}
+			tmin += string(char)
+			min ++
+		}else if val == 2{
+			if may != 0 {  tmay += ", "}
+			tmay += string(char) 
+			may ++
+		}else if val == 3{
+			if num != 0 {  tnum += ", "}
+			tnum += string(char)
+			num ++
+		}
+    }
+	return min,may,num,tmin,tmay,tnum
+}
+
+func FesValido(x []string) bool{
+	a,b,c,_,_,_ := FcicloContador(x)
+	return a>0 && b>0 && c>0
+}
+// ya no es valido ejecutarlo aqui porque se exportan los metodos. Busca en validar go
 func main(){
 	fmt.Println("________")
 	cadena := "H m l z r 1 6 z r /"
