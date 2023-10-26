@@ -54,4 +54,3 @@ func main(){
 	fmt.Printf("Numero de mayusculas %v, y fueron: %v\n",may, tmay)
 	fmt.Printf("Numero de numeros %v, y fueron: %v",num, tnum)
 }
-	
