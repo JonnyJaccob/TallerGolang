@@ -77,7 +77,48 @@ func main(){
 	s = append(s, 1)
 	printSlice(s)
 
+	// Slice the slice to give it zero length.
+	s = s[:0]
+	printSlice(s)
+
+	// // Extend its length.
+	s = s[:4]
+	printSlice(s)
+
+	// // Drop its first two values.
+	s = s[2:]
+	printSlice(s)
+
+	// // The zero value of a slice is nil.
+	// // A nil slice has a length and capacity of 0 and has no underlying array.
+	arr := make([]int, 5)     // len(a)=5, cap(a)=5
+	arrb := make([]int, 0, 5) // len(b)=0, cap(b)=5
+
+	printSlice(arr)
+	printSlice(arrb)
+
+	var arrc []int
+	printSlice(arrc)
+
+	// append works on nil slices.
+	s = append(arrc, 0)
+	printSlice(s)
+
+	// The slice grows as needed.
+	s = append(s, 1)
+	printSlice(s)
+
+	// We can add more than one element at a time.
+	s = append(s, 2, 3, 4)
+	printSlice(s)
+
 	//range 
+	pow := []int{1, 2, 4, 8, 16, 32, 64, 128}
+	// If you only want the index, you can omit the second variable.
+	// for i := range pow
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
 
 	//metodos 
 	v := Vertex{3, 4}
@@ -131,5 +172,5 @@ func compute(fn func(float64, float64) float64) float64{
 	return fn(3,4)
 }
 func describe(i interface{}){
-	fmt.Printf("(%v)\n", i)
+	fmt.Printf("(%v, %T)\n", i, i)
 }
