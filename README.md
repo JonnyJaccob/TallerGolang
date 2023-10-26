@@ -43,3 +43,8 @@ igual a funcion asincrona
 
 ## ejercicio
 leer cadena y cuales son mayusculs, minusculas y cuales son digitos 
+
+https://github.com/AriAlanPR/gotaller.git
+
+go mod tiny 
+go get .

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 type Vertex struct{
 	X int
@@ -75,8 +76,60 @@ func main(){
 
 	s = append(s, 1)
 	printSlice(s)
+
+	//range 
+
+	//metodos 
+	v := Vertex{3, 4}
+	fmt.Println(v.Abs())
+
+	//interfaces
+	var iy interface{}
+	describe(iy)
+
+	iy = 42
+	describe(iy)
+
+	iy = "Hello"
+	describe(iy)
+
+	var i I = T{"hello"}
+	i.M()
+
+	// funciones como valores 
+	hypot := func(x,y float64) float64{
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println(hypot(5,12))
+
+	fmt.Println(compute(hypot))
+	fmt.Println(compute(math.Pow))
 }
 
 func printSlice( s []int){
 	fmt.Printf("len=%d cap=%d %v\n",len(s),cap(s),s)
+}
+
+func (v Vertex) Abs() float64{
+	//v equivalente a this
+	return math.Sqrt(float64(v.X)*float64(v.X) + float64(v.Y) * float64(v.Y))
+}
+
+type I interface{
+	M()
+}
+
+type T struct{
+	s string
+}
+
+func (t T) M() {
+	fmt.Println(t.s)
+}
+
+func compute(fn func(float64, float64) float64) float64{
+	return fn(3,4)
+}
+func describe(i interface{}){
+	fmt.Printf("(%v)\n", i)
 }
